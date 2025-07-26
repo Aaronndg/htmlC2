@@ -4,11 +4,68 @@
     <meta charset="UTF-8">
     <title>Lección 02: ¿Cómo son los elementos HTML?</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f4f4f4; }
-        .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 32px; }
-        h1 { color: #2c3e50; }
-        code { background: #eee; padding: 2px 6px; border-radius: 4px; }
-        .reto { background: #eaf6ff; border-left: 4px solid #2980b9; padding: 12px; margin-top: 24px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px #0001; 
+            padding: 32px; 
+        }
+        h1, h2 { 
+            color: #2c3e50; 
+        }
+        code { 
+            background: #eee; 
+            padding: 2px 6px; 
+            border-radius: 4px; 
+        }
+        .reto { 
+            background: #eaf6ff; 
+            border-left: 4px solid #2980b9; 
+            padding: 12px; 
+            margin-top: 24px; 
+        }
+        .registration-form {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button[type="submit"] {
+            background-color: #0056b3;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        button[type="submit"]:hover {
+            background-color: #004494;
+        }
     </style>
 </head>
 <body>
@@ -26,6 +83,43 @@
         <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
 
         <p><a href="../index.html">Volver al índice</a></p>
+
+        <!-- Formulario de Registro -->
+        <form action="/registro" method="post" class="registration-form">
+            <h2>Registro de Estudiante</h2>
+            
+            <div class="form-group">
+                <label for="clase">Clase:</label>
+                <input type="text" id="clase" name="clase" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gpo">Grupo:</label>
+                <input type="text" id="gpo" name="gpo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="no">Número:</label>
+                <input type="number" id="no" name="no" required>
+            </div>
+
+            <div class="form-group">
+                <label for="materia">Materia:</label>
+                <input type="text" id="materia" name="materia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profesor">Profesor:</label>
+                <input type="text" id="profesor" name="profesor" required>
+            </div>
+
+            <div class="form-group">
+                <label for="horario">Horario:</label>
+                <input type="text" id="horario" name="horario" required>
+            </div>
+
+            <button type="submit">Enviar Registro</button>
+        </form>
     </div>
 </body>
 </html>
