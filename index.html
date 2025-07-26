@@ -3,91 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🕷️ Curso HTML & CSS del Hombre Araña</title>
-  <link rel="icon" href="https://www.svgrepo.com/show/375059/spiderman.svg" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <title>Curso HTML & CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Rubik', sans-serif;
-      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+      padding: 2rem;
     }
 
-    .card {
-      background: #111111e6;
-      border: 1px solid #c0392b;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
       border-radius: 12px;
-      padding: 40px 32px;
-      width: 95%;
-      max-width: 700px;
-      box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
-      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
     }
 
     h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #0056b3;
+      margin-bottom: 2rem;
       text-align: center;
-      font-size: 1.9rem;
-      color: #e74c3c;
-      margin-bottom: 30px;
-      text-shadow: 0 0 8px #e74c3c66;
     }
 
-    ul {
+    .course-list {
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
 
-    li {
-      margin-bottom: 16px;
-      border-bottom: 1px dashed #333;
-      padding-bottom: 8px;
+    .course-item {
+      padding: 1rem;
+      border-bottom: 1px solid #e9ecef;
+      transition: all 0.2s ease;
     }
 
-    a {
-      color: #2980b9;
+    .course-item:last-child {
+      border-bottom: none;
+    }
+
+    .course-item:hover {
+      background-color: #f8f9fa;
+      transform: translateX(8px);
+    }
+
+    .course-link {
+      color: #495057;
       text-decoration: none;
       font-size: 1.1rem;
-      transition: 0.2s ease-in-out;
-      display: inline-block;
+      display: block;
+      position: relative;
+      padding-left: 1rem;
     }
 
-    a:hover {
-      color: #f39c12;
-      transform: translateX(5px);
-      text-shadow: 0 0 5px #f39c1280;
+    .course-link::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0056b3;
     }
 
-    .emoji {
-      margin-right: 8px;
+    .course-link:hover {
+      color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      .container {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🕸️ Curso HTML & CSS del Hombre Araña</h1>
-    <ul>
-      <li><a href="leccion01/leccion01.html"><span class="emoji">🕸️</span>Lección 01: ¿Qué es HTML?</a></li>
-      <li><a href="leccion02/leccion02.html"><span class="emoji">🕷️</span>Lección 02: Elementos HTML</a></li>
-      <li><a href="leccion03/leccion03.html"><span class="emoji">🕸️</span>Lección 03: Estructura HTML</a></li>
-      <li><a href="leccion04/leccion04.html"><span class="emoji">🕷️</span>Lección 04: El DOM</a></li>
-      <li><a href="leccion05/leccion05.html"><span class="emoji">🕸️</span>Lección 05: Atributos</a></li>
-      <li><a href="leccion06/leccion06.html"><span class="emoji">🕷️</span>Lección 06: Texto y CSS</a></li>
-      <li><a href="leccion07/leccion07.html"><span class="emoji">🕸️</span>Lección 07: Estructurar contenido</a></li>
-      <li><a href="leccion08/leccion08.html"><span class="emoji">🕷️</span>Lección 08: Incrustar contenido</a></li>
-      <li><a href="leccion09/leccion09.html"><span class="emoji">🕸️</span>Lección 09: Tablas</a></li>
-      <li><a href="leccion10/leccion10.html"><span class="emoji">🕷️</span>Lección 10: Formularios</a></li>
-      <li><a href="leccion11/leccion11.html"><span class="emoji">🕸️</span>Lección 11: Eventos</a></li>
+  <div class="container">
+    <h1>Curso HTML & CSS</h1>
+    <ul class="course-list">
+      <li class="course-item"><a href="leccion01/leccion01.html" class="course-link">Lección 01: ¿Qué es HTML?</a></li>
+      <li class="course-item"><a href="leccion02/leccion02.html" class="course-link">Lección 02: Elementos HTML</a></li>
+      <li class="course-item"><a href="leccion03/leccion03.html" class="course-link">Lección 03: Estructura HTML</a></li>
+      <li class="course-item"><a href="leccion04/leccion04.html" class="course-link">Lección 04: El DOM</a></li>
+      <li class="course-item"><a href="leccion05/leccion05.html" class="course-link">Lección 05: Atributos</a></li>
+      <li class="course-item"><a href="leccion06/leccion06.html" class="course-link">Lección 06: Texto y CSS</a></li>
+      <li class="course-item"><a href="leccion07/leccion07.html" class="course-link">Lección 07: Estructurar contenido</a></li>
+      <li class="course-item"><a href="leccion08/leccion08.html" class="course-link">Lección 08: Incrustar contenido</a></li>
+      <li class="course-item"><a href="leccion09/leccion09.html" class="course-link">Lección 09: Tablas</a></li>
+      <li class="course-item"><a href="leccion10/leccion10.html" class="course-link">Lección 10: Formularios</a></li>
+      <li class="course-item"><a href="leccion11/leccion11.html" class="course-link">Lección 11: Eventos</a></li>
     </ul>
   </div>
 </body>
